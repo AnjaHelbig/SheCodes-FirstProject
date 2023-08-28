@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Project 1</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top, #1b6b93, #dde6ed, #dde6ed);
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+        color: #1b6b93;
+        font-size: xx-large;
+      }
+
+      h3 {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .citation {
+        text-align: center;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        background-color: #1b6b93;
+        padding: 15px 20px;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      button:hover {
+        color: #1b6b93;
+        background-color: white;
+        transition: all 200mx ease-in-out;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px;
+      }
+
+      ul {
+        line-height: 150%;
+      }
+
+      ol {
+        line-height: 150%;
+      }
+
+      .sign {
+        text-align: center;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <div class="header"></div>
+      </h1>
+
+      <hr />
+
+      <h2>
+        <strong>Why I wanted to learn programming:</strong>
+      </h2>
+
+      <p>
+        For me it's always frustrating only to work according to work
+        instruction. Just process something up and down again and again 🥱.
+        <br />
+        <br />
+        <u>I have two options:</u>
+      </p>
+
+      <ol>
+        <li>
+          Carry on without asking "why" or "how" and don't question anything.
+        </li>
+        <li>
+          Try to understand what I'm doing or why something is not working.
+        </li>
+      </ol>
+
+      <p>
+        <u>I prefer <strong>number 2</strong>.</u>😉
+      </p>
+
+      <ul>
+        <li>
+          If I need to do boring stuff with excel, I ask "Doctor GOOGLE" what
+          functions could be used best.
+        </li>
+        <li>
+          If I shall work accoring to a process, I try to understand what's
+          behind it.
+        </li>
+        <li>If I have questions, I try to find someone who can help out.</li>
+        <li>If nobody can help out, I try to find a solution by myself.</li>
+        <li>
+          And if your new cloud software challenges you quite a lot, learn
+          programming to be able to join the discussions 🤣.
+        </li>
+      </ul>
+
+      <br />
+
+      <p class="citation">
+        "Tell me and I forget, teach me and I may remember, involve me and I
+        learn."
+      </p>
+
+      <a
+        class="link"
+        href="https://de.wikipedia.org/wiki/Benjamin_Franklin"
+        target="_blank"
+        ><em>Benjamin Franklin</em>
+      </a>
+
+      <br />
+
+      <h3>My new evening routine - starting with Front-End 👩‍💻!</h3>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/784/original/sleeping-cat-wallpaper-hd-1.jpg?1687523819"
+        alt="catOnCouch"
+      />
+
+      <br />
+
+      <button>
+        <strong>👉 Let's call it a day!</strong>
+      </button>
+
+      <br />
+
+      <ul class="sign">
+        Coded by Anja 👌 Thanks a lot!
+      </ul>
+    </div>
+
+    <script>
+      function beginning() {
+        let name = prompt("Hello 😊, what's your name?");
+        if (name.length === 0) {
+          alert("Please enter your name. It seems as you forgot it😀.");
+          beginning();
+        } else {
+          let question = prompt(
+            "Hi " +
+              name +
+              ", nice to meet you! Do you want to know why I started this course?"
+          );
+
+          question = question.toLowerCase().trim();
+
+          let h1 = document.querySelector("h1");
+
+          if (question === "yes" || question === "sure") {
+            h1.innerHTML =
+              "Cool " +
+              name +
+              "! Nice to hear that you are interested, let's get started 👍.";
+          } else {
+            if (question === "no") {
+              h1.innerHTML =
+                "😢 <br/> What a pity, but it was nice to meet you " +
+                name +
+                "!";
+            } else {
+              h1.innerHTML = "What 😳?";
+            }
+          }
+        }
+      }
+
+      function change() {
+        alert("It's not a bug - it's an undocumented feature 🤓.");
+      }
+
+      beginning();
+
+      let clickButton = document.querySelector("button");
+
+      clickButton.addEventListener("click", change);
+    </script>
+  </body>
+</html>
